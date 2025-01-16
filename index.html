@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Campionature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestione Campionature</h1>
+    <form id="campionatureForm">
+        <label for="cliente">Nome Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="commerciale">Nome Commerciale:</label>
+        <input type="text" id="commerciale" name="commerciale" required>
+
+        <label for="stato">Stato:</label>
+        <select id="stato" name="stato">
+            <option value="Da fare">Da fare</option>
+            <option value="In corso">In corso</option>
+            <option value="Completata">Completata</option>
+        </select>
+
+        <label for="dataAggiunta">Data Aggiunta:</label>
+        <input type="date" id="dataAggiunta" name="dataAggiunta">
+
+        <label for="dataConsegna">Data Consegna:</label>
+        <input type="date" id="dataConsegna" name="dataConsegna">
+
+        <label for="thumbnail">Carica un Thumbnail:</label>
+        <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+        <img id="thumbnailPreview" style="display:none; width:50px;" alt="Anteprima Thumbnail">
+
+        <button type="submit">Aggiungi Campionatura</button>
+    </form>
+
+    <h2>Campionature</h2>
+    <table id="campionatureTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cliente</th>
+                <th>Commerciale</th>
+                <th>Stato</th>
+                <th>Data Aggiunta</th>
+                <th>Data Consegna</th>
+                <th>Thumbnail</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Le righe verranno aggiunte qui -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
